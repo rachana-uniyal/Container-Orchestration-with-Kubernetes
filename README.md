@@ -115,6 +115,20 @@ Deploy web application image from our private Docker registry in K8s cluster
 ##### copy config.json file from Minikube to my host
 
     scp -i $(minikube ssh-key) docker@$(minikube ip):.docker/config.json .docker/config.json
+    
+    
+## Project 5: Setup Prometheus Monitoring in Kubernetes cluster
+
+### Technologies used
+
+- Kubernetes
+- Helm
+- Prometheus
+
+### Project Description
+
+Deploy Prometheus in the local Kubernetes cluster using a Helm chart
+
 
 
 
