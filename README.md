@@ -11,5 +11,7 @@ Deploy MongoDB and MongoExpress with configuration and credentials extracted int
 
 ## Notes:
 - To create an external address for accessing the application in the browser - `minikube service mongo-express-service` 
+
 - ![image 1](https://github.com/rachana-uniyal/Container-Orchestration-with-Kubernetes/blob/main/images/1.png)
+
 - ![image 2](https://github.com/rachana-uniyal/Container-Orchestration-with-Kubernetes/blob/main/images/2.png)
