@@ -61,3 +61,65 @@ Deploy and configure nginx ingress to access the UI application from the browser
 3. Deploy Mongo Express - 'kubectl apply -f test-mongo-express.yaml'
 
 
+## Project 4: Deploy our web application in K8s cluster from private Docker registry
+
+### Technologies used
+
+- Kubernetes
+- Helm
+- AWS ECR
+- Docker
+
+### Project Description
+
+Create Secret for credentials for the private Docker registry
+
+Configure the Docker registry secret in the application Deployment component
+
+Deploy web application image from our private Docker registry in K8s cluster
+
+### Notes
+
+
+##### login in docker private repo
+
+    docker login -u username -p password 
+
+##### generated file
+    cat .docker/config.json
+    cat .docker/config.json | base64
+
+##### create docker login secret from config.json file
+
+    kubectl create secret generic my-registry-key \
+    --from-file=.dockerconfigjson=.docker/config.json \
+    --type=kubernetes.io/dockerconfigjson
+
+    kubectl create secret generic my-registry-key --from-file=.dockerconfigjson=.docker/config.json --type=kubernetes.io/dockerconfigjson
+
+    kubect get secret
+
+##### create docker login secret with login credentials
+
+    kubectl create secret docker-registry my-registry-key \
+    --docker-server=https://private-repo \
+    --docker-username=user \
+    --docker-password=pwd
+
+    kubectl create secret docker-registry my-registry-key --docker-server=https://private-repo --docker-username=user --docker-password=pwd
+
+##### access minikube console
+
+    minikube ssh
+
+##### copy config.json file from Minikube to my host
+
+    scp -i $(minikube ssh-key) docker@$(minikube ip):.docker/config.json .docker/config.json
+
+
+
+
+
+
+
+
