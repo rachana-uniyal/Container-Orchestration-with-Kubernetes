@@ -15,3 +15,17 @@ Deploy MongoDB and MongoExpress with configuration and credentials extracted int
 ![image 1](https://github.com/rachana-uniyal/Container-Orchestration-with-Kubernetes/blob/main/images/1.png)
 
 ![image 2](https://github.com/rachana-uniyal/Container-Orchestration-with-Kubernetes/blob/main/images/2.png)
+
+
+## Project 2: Deploy Mosquitto message broker with ConfigMap and Secret Volume Types
+
+### Technologies used
+
+- Kubernetes
+- Docker
+- Mosquitto
+
+### Project Description
+
+Define configuration and passwords for Mosquitto message broker with ConfigMap and Secret Volume types
+
